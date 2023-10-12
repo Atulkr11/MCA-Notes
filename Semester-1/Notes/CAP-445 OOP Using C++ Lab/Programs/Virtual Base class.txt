@@ -1,0 +1,35 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//Virtual Base class
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    void f1()
+    {
+        cout << "Class A"<<endl;
+    }
+};
+
+class B : virtual public A {
+};
+
+class C : virtual public A {
+};
+
+class D : public B, public C {
+
+};
+
+int main()
+{
+    D d;
+    d.f1();
+    return 0;
+}

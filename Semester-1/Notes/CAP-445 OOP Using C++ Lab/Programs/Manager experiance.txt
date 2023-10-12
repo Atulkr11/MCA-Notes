@@ -1,0 +1,52 @@
+
+
+#include<iostream>
+using namespace std;
+
+class Jalandhar{
+    public:
+    int exp_jal;
+        void mng_jal(){
+            cout<<"Enter the experience in year (Manager of Jalandhar Branch) : "<<endl;
+            cin>>exp_jal;
+        }
+};
+
+class Phagwara{
+    public:
+    int exp_phg;
+        void mng_phg(){
+            cout<<"Enter the experience in year (Manager of Phagwara Branch) : "<<endl;
+            cin>>exp_phg;
+        }
+};
+
+class Hoshiarpur{
+    public:
+    int exp_hrp;
+        void mng_hrp(){
+            cout<<"Enter the experience in year (Manager of Hoshiarpur Branch) : "<<endl;
+            cin>>exp_hrp;
+        }
+};
+
+class Print: public Jalandhar, public Phagwara, public Hoshiarpur{
+    public:
+        void display(){
+            if(exp_jal > exp_phg && exp_jal > exp_hrp)
+                cout<<"Manager of Jalandhar Branch having more experience than others."<<endl;
+            else if(exp_phg > exp_jal && exp_phg > exp_hrp)
+                cout<<"Manager of Phagwara Branch having more experience than others."<<endl;
+            else
+                cout<<"Manager of Hoshiarpur Branch having more experience than others."<<endl;
+        }
+};
+
+int main(){
+    Print p1;
+    p1.mng_jal();
+    p1.mng_phg();
+    p1.mng_hrp();
+    p1.display();
+    return 0;
+}

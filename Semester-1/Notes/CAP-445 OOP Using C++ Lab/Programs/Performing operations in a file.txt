@@ -1,0 +1,93 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+//Performing operations in file
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+//open()  1st Operation
+//close(); 2nd Operation
+//tellp(); 3rd Operation
+//seekp(); 4th Operation
+//tellg(); 5th Operation
+//seekg(); 6th Operation
+
+
+class FileOperations
+{
+public:
+    int empId, empSalary;
+    string empName;
+    void insertData()
+    {
+        ofstream outFile;
+        outFile.open("file.txt", ios::app); // 1st Operation
+        if (!outFile)
+        {
+            cerr << "File Not Created";
+            return;
+        }
+        cout<<"Enter Employee Details Like emp id, emp Name, emp Salary : ";
+        while(cin>>empId>>empName>>empSalary){
+            outFile<<empId<<' '<<empName<<' '<<empSalary<<endl;
+        }
+
+        outFile.close();//2nd Operation
+    }
+    void filePointer()
+    {
+        fstream inFile("file.txt", ios::in);
+        if (!inFile)
+        {
+            cerr << "File Not Avaliable";
+            return;
+        }
+
+        cout<<inFile.tellp()<<endl; // 3rd Operation
+
+        inFile.seekp(2,ios::beg); // 4th Operation
+
+        cout<<inFile.tellp()<<endl;
+
+        cout<<inFile.tellg()<<endl;//5th Operation
+
+        inFile.seekg(0,ios::beg); //6th Operation
+
+        string data;
+        inFile >> data;
+        cout<<data;
+
+        inFile.close();
+    }
+
+    void printData()
+    {
+        fstream inFile("file.txt", ios::in);
+        if (!inFile)
+        {
+            cerr << "File Not Avaliable";
+            return;
+        }
+        while(inFile>>empId>>empName>>empSalary){
+            cout << empId << ' ' << empName << ' ' << empSalary<<endl;
+        }
+
+        inFile.close();
+    }
+
+};
+
+int main()
+{
+    FileOperations fo;
+    fo.insertData();
+    fo.printData();
+    fo.filePointer();
+    return 0;
+}

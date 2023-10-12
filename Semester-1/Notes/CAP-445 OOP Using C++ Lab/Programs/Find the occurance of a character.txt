@@ -1,0 +1,29 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+char str[100], ch;
+int i=0, freq=0;
+cout<<"Enter the String: ";
+gets(str);
+cout<<"Enter the character you want to find: ";
+cin>>ch;
+while(str[i])
+{
+if(ch==str[i])
+freq++;
+i++;
+}
+cout<<"No of occurence = "<<freq;
+cout<<endl;
+return 0;
+}

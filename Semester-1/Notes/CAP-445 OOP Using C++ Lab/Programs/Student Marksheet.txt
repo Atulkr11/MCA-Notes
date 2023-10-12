@@ -1,0 +1,52 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+class personal{
+public:
+int age;
+int rollno;
+string gender;
+public:
+void enterdetails()
+{
+cout<<"enter age,rollno and gender"<<endl;
+cin>>age>>rollno>>gender;
+}
+
+};
+
+class marks{
+public:
+int m1,m2,m3;
+public:
+void entermrks()
+{
+cout<<"enter marks"<<endl;
+cin>>m1>>m2>>m3;
+}
+};
+
+class result : public personal,public marks{
+public:
+int totalmarks(){
+int r=m1+m2+m3;
+return r;
+}};
+
+int main()
+{
+result r1;
+r1.enterdetails();
+r1.entermrks();
+int r2=r1.totalmarks();
+cout<<"total marks="<<r2;
+
+
+}

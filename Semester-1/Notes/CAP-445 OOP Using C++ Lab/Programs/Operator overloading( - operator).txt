@@ -1,0 +1,41 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+class test
+{
+int x;
+public:
+test()
+{
+x=0;
+}
+test(int y)
+{
+x=y;
+}
+void display()
+{
+cout<<" x = "<<x;
+}
+test operator -()
+{
+x = -x;
+return test(x);
+}
+};
+int main()
+{
+test t1; //t1.x=0
+test t2(10); //t2.x=10
+t1.display(); // x=0
+t2.display(); // x=10
+-t1;
+-t2;
+t1.display(); //x = -0;
+t2.display(); //x = -10
+return 0;
+
+}

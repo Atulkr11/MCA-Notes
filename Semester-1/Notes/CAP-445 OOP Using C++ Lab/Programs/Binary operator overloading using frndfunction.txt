@@ -1,0 +1,58 @@
+
+#include <iostream>
+
+using namespace std;
+class Distance
+{
+public:
+
+int feet, inch;
+
+Distance()
+{
+this->feet = 0;
+this->inch = 0;
+}
+
+Distance(int feet, int inch)
+{
+this->feet = feet;
+this->inch = inch;
+}
+
+friend Distance operator+(Distance&, Distance&);
+};
+
+
+Distance operator+(Distance& v1, Distance& v2) // Call by reference
+{
+
+Distance v3;
+
+
+v3.feet = v1.feet + v2.feet;
+v3.inch = v1.inch + v2.inch;
+
+
+return v3;
+}
+
+
+int main()
+{
+
+Distance d1(8, 9);
+
+
+Distance d2(10, 2);
+
+
+Distance d3;
+
+
+d3 = d1 + d2;
+
+
+cout << "\nTotal Feet & Inches: " << d3.feet << "'" << d3.inch;
+return 0;
+}

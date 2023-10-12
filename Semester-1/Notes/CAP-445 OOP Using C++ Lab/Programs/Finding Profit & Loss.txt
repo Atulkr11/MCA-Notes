@@ -1,0 +1,31 @@
+
+#include<iostream>
+using namespace std;
+
+class Product{
+    public:
+    float cp, sp, profit, loss;
+    void take_input(){
+        cout<<"Enter Cost Price :Rs. ";
+        cin>>cp;
+        cout<<"Enter Selling Price :Rs. ";
+        cin>>sp;
+    }
+
+    void display(){
+        if(cp>sp)
+            cout<<"Loss of :Rs. "<<cp-sp<<endl;
+        else if(cp<sp)
+            cout<<"Profit of :Rs. "<<sp-cp<<endl;
+        else
+            cout<<"No profit, No Loss"<<endl;
+        
+    }
+};
+
+int main(){
+    Product p1;
+    p1.take_input();
+    p1.display();
+    return 0;
+}

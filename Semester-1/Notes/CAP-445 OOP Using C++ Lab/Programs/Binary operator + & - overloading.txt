@@ -1,0 +1,51 @@
+
+
+#include <iostream>
+
+using namespace std;
+class Overload
+{
+public:
+int num1 , num2;
+void takeInput(int a , int b)
+{
+num1 = a;
+num2 = b;
+}
+Overload operator+ (Overload& obj)
+{
+cout << "Sum is : " << this -> num1 + this->num2;
+}
+Overload operator- (Overload& obj)
+{
+cout << "Sum is : " << this -> num1 - this->num2;
+}
+};
+
+int main()
+{
+int num1 , num2,option;
+Overload ovl;
+cout << "Enter Two value"<<endl;;
+cout << "Enter Number 1 : ";
+cin >> num1;
+cout << "Enter Number 2 : ";
+cin >> num2;
+cout << "what you want to perform " << endl << "1 for addition " << endl << "2 for subtraction"<<endl;
+cin >> option;
+switch(option)
+{
+case 1:
+ovl.takeInput(num1 , num2);
+ovl.operator+(ovl);
+break;
+case 2:
+
+ovl.takeInput(num1 , num2);
+ovl.operator-(ovl);
+break;
+default:
+cout << "error";
+}
+return 0;
+}

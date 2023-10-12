@@ -1,0 +1,32 @@
+
+#include <iostream>
+using namespace std;
+
+class Points
+{
+public:
+    int win, loose, draw;
+    void take_input()
+    {
+        cout << "Enter number of matches won by the team : " << endl;
+        cin >> win;
+        cout << "Enter number of matches loose by the team : " << endl;
+        cin >> loose;
+        cout << "Enter number of matches drawn by the team : " << endl;
+        cin >> draw;
+    }
+
+    void total_score(){
+        cout<<"Total Points : "<<3*win+0*loose+1*draw;
+    }
+};
+
+int main()
+{
+
+    Points p1;
+    p1.take_input();
+    p1.total_score();
+
+    return 0;
+}

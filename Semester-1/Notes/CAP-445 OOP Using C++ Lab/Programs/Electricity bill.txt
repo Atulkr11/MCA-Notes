@@ -1,0 +1,60 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+
+class Bill{
+    
+    int u1, u2, rent1= 100, rent2= 500;
+    public:
+    
+    void domestic();
+    void commercial();
+};
+
+void Bill :: domestic(){
+    cout<<"Enter the unit : "<<endl;
+    cin>>u1;
+    
+    if(u1<=50){
+       cout<<"Your Bill is : "<<rent1; 
+    }
+    else if(u1>50){
+        cout<<"Your Bill is :"<<8*((u1-50))+rent1;
+    }
+}
+
+void Bill :: commercial(){
+    cout<<"Enter the unit : "<<endl;
+    cin>>u2;
+    
+    if(u2<=100){
+       cout<<"Your Bill is : "<<rent2; 
+    }
+    else if(u2>100){
+        cout<<"Your Bill is :"<<15*((u2-100))+rent2;
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter 0 if you are a domestic user and Enter 1 if you are a commercial user : "<<endl;
+    cin>>n;
+    
+    Bill b1;
+    if(n==0)
+        b1.domestic();
+    else
+        b1.commercial();
+    
+
+    return 0;
+}

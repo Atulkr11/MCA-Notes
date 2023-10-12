@@ -1,0 +1,42 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class test
+{
+int x; // bydefault it is private
+public:
+test() //default constructor
+{
+x=0;
+}
+test(int a) // parameterized constructor
+{
+x = a;
+}
+void display()
+{
+cout<<"Value of x = "<< x <<endl;
+}
+test operator -( ) // This is unary operator overloading function
+{
+x = -x;
+return test();
+}
+};
+int main() {
+test t1; test t2(10);
+-t1;
+-t2;
+t1.display(); t2.display();
+return 0;
+}
+
