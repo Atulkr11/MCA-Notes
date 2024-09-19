@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Test</title>
+    <style>
+        .maincontainer {
+            display: flex;
+            border: .5em solid blue;
+            gap: .5rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+
+        .subcontainer {
+            border: .25em solid red;
+        }
+
+        .subcontainer:nth-child(3) {
+            align-self: center;
+        }
+
+        @media screen and (max-width:768px) {
+            .subcontainer:nth-child(1) {
+                order: 6;
+            }
+
+            .subcontainer:nth-child(2) {
+                order: 7;
+            }
+
+            .subcontainer:nth-child(3) {
+                order: 1;
+            }
+
+            .subcontainer:nth-child(4) {
+                order: 5;
+            }
+
+            .subcontainer:nth-child(5) {
+                order: 2;
+            }
+
+            .subcontainer:nth-child(6) {
+                order: 4;
+            }
+
+            .subcontainer:nth-child(7) {
+                order: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="subcontainer">
+            <h1>First</h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Second</h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Third</h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Fourth</h1>
+        </div>
+        <div class="subcontainer fifth">
+            <h1>Fifth</h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Sixth</h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Seventh</h1>
+        </div>
+    </div>
+</body>
+
+</html>

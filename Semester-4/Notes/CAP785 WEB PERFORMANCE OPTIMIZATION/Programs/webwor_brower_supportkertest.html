@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Web Worker API</title>  
+</head>  
+<body>  
+<h2>Example to check the browser support of Web Workers</h2>  
+<div id="supported"></div>  
+<div id="unsupported"></div>  
+<button onclick="worker();">click me</button>  
+<script type="text/javascript">  
+   function worker()   
+   {  
+    if(typeof(Worker)!=="undefined"){  
+     document.getElementById("supported").innerHTML="Supporting the browser";  
+      }  
+     else  
+      {  
+      document.getElementById("unsupported").innerHTML="Not supporting";}  
+   }  
+</script>  
+</body>  
+</html>  

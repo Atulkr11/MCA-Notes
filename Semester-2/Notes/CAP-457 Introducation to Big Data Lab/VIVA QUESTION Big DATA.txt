@@ -1,0 +1,207 @@
+Q1 What is Apache hadoop ?
+   Apache Hadoop is an open source framework that is used to efficiently
+   store and process large datasets ranging in size from gigabytes to petabytes of data.
+
+   Four main modules:
+   1.HDFS: HDFS is a distributed file system that handles large data sets running on commodity hardware. Default size of HDFS data block is 128 MB.
+   Features of HDFS:Fault tolerance,High availability,High reliability,Replication,Scalability,Distributed Storage
+
+   2.YARN: Yet Another Resource Negotiator is a large-scale, distributed operating system for big data applications 
+   YARN is responsible for allocating system resources to the various applications running in a Hadoop cluster
+
+   3.MAPREDUCE: MapReduce is a processing technique and a program model for distributed computing based on java. The MapReduce algorithm contains two important tasks,    namely Map and Reduce. 
+   Map takes a set of data and converts it into another set of data, where individual elements are broken down into tuples(key/value pairs). 
+   Secondly, reduce task, which takes the output from a map as an input and combines those data tuples into a smaller set of tuples. As the sequence of the name MapReduce    implies, the reduce task is always performed after the map job.
+
+   4.HADOOP COMMON:It refers to the collection of common utilities and libraries that support other Hadoop modules.
+
+   Hadoop mainly works on 3 different modes:
+   1)Standalone Mode(Local Mode):It is default mode in which hadoop run. It is mainly used for debugging where we don't really use HDFS
+   2)Pseudo-Distributed Mode(Single Node Cluster):In this mode all the Hadoop daemons will be running on a single node.
+   3)Fully-Distributed Mode(Multi Node Cluster): In this mode all daemons are executed in separate nodes forming a multi-node cluster.
+	 Hadoop Daemons: It is a set of processes that run on Hadoop.
+
+Q2 What is Apache kafka ?
+   It is a high throughout distributed messaging system frequently used with hadoop.
+
+Q3 What is Apache impala ?
+   Impala is a MPP (Massive Parallel Processing) SQL query engine for processing huge volumes of data that is stored in Hadoop cluster. 
+   It is an open source software which is written in C++ and Java.
+
+Q4 What is Apache Spark?
+   It is lightning fast and general purpose computation engine for large-scale processing. 
+   It can process the data up to 100 times faster than MapReduce.
+
+Q5 What is Cloudera ?
+   cloudera is used to deploy and manage hadoop and understanding
+   the data that serves as the lifeblood of any organization.
+
+Q6 What is Virtual box ?
+   VirtualBox is designed to run virtual machines on your physical machine without reinstalling your OS that is running on a physical machine.
+
+Q7 What is Virtual Machine?
+   Virtual machine is a computer resource that uses software instead of a physical computer to run programs and deploy apps.
+
+Q8 What are the Big Data Tools?
+   Apache Hadoop,Apache Spark,Flink,Apache Storm,Apache Cassandra,MongoDB,Kafka,
+   Tableau,RapidMiner,R Programming
+
+Q9 What are the different types of MapReduce programs ?
+   1. wordcount  2. wordmean  3.sort    4.wordmedia  5. join
+
+Q10 cloudera and hadoop difference  ?
+    cloudera                                                          HADOOP
+    1.The management tool of Cloudera is Cloudera Manager.  
+
+Q10 Sharding: Sharding is a method for distributing a single dataset across multiple databases.
+                             
+Q11 What is Replication ?
+    Replication stores multiple copies of a dataset, known as replicas, on multiple nodes. 
+    type:Full-table, transactional,snapshot, merge..etc
+
+Q12 Master Slave Replication ?
+    During master-slave replication, nodes are arranged in a master-slave configuration, 
+    and all data is written to a master node. 
+    Once saved, the data is replicated over multiple slave nodes 
+
+Q13 peer to peer replication ?
+    With peer-to-peer replication, all nodes operate at the same level.
+    In other words, there is not a master-slave relationship between the nodes.
+    Each node, known as a peer, is equally capable of handling reads and writes.
+
+Q14 jar file
+    JAR stands for Java ARchive. It is based on ZIP file formate and is used for aggregating many files into one.
+
+Q15 What is Big Data?
+    Big data is a combination of structured, semistructured and unstructured data collected by an organizations.
+
+Q16 Big data 4 phases:- 
+    data collection, data storage, data analysis, and knowledge creation.
+
+Q17 What are the 5 V's/Components in Big Data?
+    volume -refers to the size and amounts of big data
+    value -refers to how useful the data is in decision making
+    variety -refers to the diversity and range of different data types
+    velocity -refers to the high speed of accumulation of data
+    veracity -refers to  accuracy of data
+
+Q18 hive and mapreduce difference 
+                MapReduce                                                   Hive
+   1. It is a Data Processing Language                        1. It is a SQL-like Query Language.
+   2. It converts the job into map-reduce functions.          2. It converts the SQL queries to HQL(Hive-QL)
+   3. It provides low level of abstraction.                   3. It provides a high level of abstraction.
+
+Q20 What is cloud computing: Cloud computing is the on-demand availability of computer system resources which is basically provide data storage, computing power.
+
+Q19 Structured data: The data which is often stored in tabular form.  
+    Ex: SQL Table in DBMS
+    Unstructured Data : Data that does not conform to a data model or data schema is known as unstructured data
+    Ex: Image, Video, Audio etc.
+    Semi-Structured Data: Semi-structured data has a defined level of structure and consistency, 
+    but it is not relational in nature.
+    Ex: XML, JSON files, Sensor Data etc.
+
+Q20 What is Data Analysis?
+    Data analysis is the process of examining data to find facts, relationships, patterns, insights and/or trends.
+    Data analytics is a discipline that includes the management of the complete data lifecycle.
+
+• Descriptive analytics-carried out to answer questions about events that have already occurred.
+• Diagnostic analytics-aim to determine cause of a phenomenon that occurred in past using questions 
+  that focus on reason behind the event.
+• Predictive analytics-carried out in an attempt to determine the outcome of an event that might occur in the future
+• Prescriptive analytics-build upon the results of predictive analytics by prescribing actions that should be taken
+
+Q21 What is RDBMS?
+    RDBMS is a collection of programs and capabilities that enable IT teams and other to create, update the records
+
+Q22 What is NoSql and what are the characteristics?
+    NoSQl is a set of concepts that allows that rapid and efficient processing of data sets with a focus on performance.
+    1)Support Multiple data models
+    2)Flexibility
+    3)Zero Downtime
+ 
+For a transaction to be Good, it should follow the ACID property.
+Automacity: ensures that all operations will always succeed or fail completely. In other words, there are no partial transactions.
+Consistancy: ensures that the database will always remain in a consistent state
+Isolation: ensures that the results of a transaction are not visible to other operations until it is complete.
+Durability: ensures that the results of an operation are permanent.
+
+BASE is a database design principle based on the CAP theorem and leveraged by database systems that use distributed technology. 
+BASE stands for:basically available soft state eventual consistency
+
+Q22 What are the fault tolerance feature in HDFS?
+    Fault tolerance in Hadoop HDFS refers to the working strength of a system in an unfavourable condition
+    and how that system can handle such a situation. Fault tolerance is mainlt achieved using data replication and Heartbeat message.
+
+Q23 What are Hadoop configuartion files?
+    Configuration files are the files which are located in the extracted tar.gz file in the etc/hadoop/directory
+
+Q24 What are the different data types used by Hadoop?
+   1)Primitive data:Numeric data,Date/Time data,String data
+   2)Complex data: Array,MAP,Struct,Union
+   3)Columns data: Integral type,Timestamp,Decimal 
+
+Q25 What is NameNode?
+    NameNode is the master node in HDFS that manages the file system metadata.
+
+Q26 What is DataNode?
+    DataNode is a slave node in HDFS that stores the actual data as instructed by the NameNode.
+
+Q27 Various form of data
+    Nominal, Ordinal, Discrete and Continuous.
+
+Q28 Component of big data
+    Data sources, Data storage, Batch processing, Analysis and reporting, Analytical data store
+
+Q31 What does wrangling data mean?
+   Data wrangling—also called data cleaning, data remediation,
+   or data munging—refers to a variety of processes designed to transform raw data into more readily used formats.
+   The exact methods differ from project to project depending on the data you're leveraging and the goal you're trying to achieve.
+
+Q32 Hadoop test Command Usage:
+    The test command is used for file test operations.
+    It gives 1 if a path exists.
+    It gives 0 if it has zero length, or path provided by the user is a directory, or otherwise.
+    command:hadoop fs -test  -[defsz] <path>
+
+Q33 What is BPM?
+    Bussiness process management is used to analyze, improve and automate a company's business processes.
+
+Q34 Data Analytics lifecycle?
+    Discovery->Data Preparation->Model Planning->Model Building->Operationlise
+
+Q35 OLTP-Online Transaction Processing is a type of data processing that consist of execcuting a no. of transactions occuring like online banking,shopping etc
+    OLAP- Online Analyical Processing is a technology that oragine large business databases.
+
+Q36 Parallel Processing: It is a method in computing of running two or more processors(CPUs) to handle separate parts of an overall task.
+    Distributed Processing: It is diverging massive amount of data to several different nodes running in a cluster for processing.
+
+Q37 Heat Map: Heat maps use colors to represent data.
+
+Q38 Clustering & Classification: Classification and clustering are techniques used in big data to analize collected data while clustering is used to group similar data     instance together.
+
+Q39 Provenance: Provenance is information about the origin and creation process of data.
+
+Q40 SCV: It stand for Single Customer View. It is used to collect data from online and offline data sources.
+
+Q41 CAP Theorm: It is distributed database system which can use consistency, availability, and partition tolerance
+
+Q42 Data Mart: It is a single form of data which focuses on a single subject.
+
+In batch mode, data is processed offline in batches and the response time could vary from minutes to hours. 
+
+
+Q37 Some commands used in Hadoop
+    1. hadoop fs -copyFormLocal<local file path> //for copying file form local system to hdfs 
+    2. hadoop fs -copyToLocal<hdfs path><local path> // to copy file from hdfs to local system
+    3. hadoop fs -checksum <file path> //return the checksum information of a file
+    4. hadoop fs -ls <path>//list all files
+    5. hadoop fs -mkdir <folder name> // for making directory
+    6. hadoop fs -touchz <file name> //for making empty file
+    7. hadoop fs -cat <path> // for print file content
+    8. hadoop fs -movefromLocal // move file from local to HDFS
+    9. hadoop fs -cp <sourse path of HDFS> <destination path of HDFS> // for coping file within HDFS
+   10. hadoop fs -mv <sourse path of HDFS> <destination path of HDFS> // for moving file within HDFS
+   11. hadoop fs -rmr <file name/dir name> // for deleting file/folder from HDFS
+   12. hadoop fs -du <file name> // to know size of each file in the directory
+   13. hadoop fs -dus <dir name> // it shows total size of dir/file

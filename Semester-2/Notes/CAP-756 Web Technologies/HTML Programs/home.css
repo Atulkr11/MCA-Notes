@@ -1,0 +1,38 @@
+nav{
+    background-color: var(--navcolour);
+    position: fixed;
+    width: 100%;
+    box-shadow: var(--shadow);
+    z-index: 100;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--pad);
+    margin-top: 8px;
+}
+.header__inner > img{
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+.header__heading{
+    margin-left: 20px;
+    border-radius: var(--radius);
+    padding: 10px;
+    box-shadow: var(--shadow);
+}
+.header__btn{
+    float: right;
+    padding: var(--pad1);
+    margin-top: -50px;
+}
+.header__btn > .btn{
+    padding: var(--pad);
+    cursor: pointer;
+    border-radius: var(--radius);
+    font-size: var(--btnfont);
+    background-color:var(--btncolour) ;
+    margin-right: 10px;
+}
